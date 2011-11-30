@@ -18,6 +18,8 @@ module Mogli
 
     # As a like
     define_properties :created_time
+    
+    has_association :tabs, "Tab"
 
     def client_for_page
       if access_token.nil? || access_token.empty?
